@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95F9AABA-E23C-4AE4-B675-119848B9CC09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PI_Projekt_SiM</RootNamespace>
+    <AssemblyName>PI_Projekt_SiM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Silvio\Documents\GitHub\r17015\Instalacija\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>hr-HR</TargetCulture>
+    <ProductName>Store and Manage</ProductName>
+    <PublisherName>S&amp;M Tim</PublisherName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PI_Projekt_SiM.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>S&amp;M_App_Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D3DA40DCDF708EBB40428B2D173820E446A0FD87</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PI_Projekt_SiM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.1.3\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.11.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PomocneFunkcije">
+      <HintPath>.\PomocneFunkcije.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetIzdatnice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetIzdatnice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetKorisnici.cs">
+      <DependentUpon>DataSetKorisnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetKorisnici.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetKorisnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetOtpisnice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetOtpisnice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPoruke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPoruke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPrimke.cs">
+      <DependentUpon>DataSetPrimke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPrimke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPrimke.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetSirovine.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSirovine.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetUloge.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUloge.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetZahtjevnicaSirovina.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetZahtjevnicaSirovina.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetZahtjevnicaSirovinaDodajNovi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetZahtjevnicaSirovinaDodajNovi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetZahtjevnice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetZahtjevnice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmGlavniPekarKreirajNovuZahtjevnicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlavniPekarKreirajNovuZahtjevnicu.Designer.cs">
+      <DependentUpon>frmGlavniPekarKreirajNovuZahtjevnicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGlavniPekarKreiranjeZahtjevnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlavniPekarKreiranjeZahtjevnice.Designer.cs">
+      <DependentUpon>frmGlavniPekarKreiranjeZahtjevnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGlavniPekarPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlavniPekarPocetna.Designer.cs">
+      <DependentUpon>frmGlavniPekarPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGlavniPekarPoruke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlavniPekarPoruke.Designer.cs">
+      <DependentUpon>frmGlavniPekarPoruke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGlavniPekarPosaljiPoruku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlavniPekarPosaljiPoruku.Designer.cs">
+      <DependentUpon>frmGlavniPekarPosaljiPoruku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGlavniPekarSkladiste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlavniPekarSkladiste.Designer.cs">
+      <DependentUpon>frmGlavniPekarSkladiste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGlavniPekarZahtjevnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlavniPekarZahtjevnice.Designer.cs">
+      <DependentUpon>frmGlavniPekarZahtjevnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarKreirajNovuPrimku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarKreirajNovuPrimku.Designer.cs">
+      <DependentUpon>frmSkladistarKreirajNovuPrimku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarKreiranjeOtpisniceSirovine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarKreiranjeOtpisniceSirovine.Designer.cs">
+      <DependentUpon>frmSkladistarKreiranjeOtpisniceSirovine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarKreiranjePrimke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarKreiranjePrimke.Designer.cs">
+      <DependentUpon>frmSkladistarKreiranjePrimke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarNovaIzdatnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarNovaIzdatnica.Designer.cs">
+      <DependentUpon>frmSkladistarNovaIzdatnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarPopisIzdatnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarPopisIzdatnica.Designer.cs">
+      <DependentUpon>frmSkladistarPopisIzdatnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarPopisOtpisnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarPopisOtpisnica.Designer.cs">
+      <DependentUpon>frmSkladistarPopisOtpisnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarPopisZahtjevnicaGlavniPekar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarPopisZahtjevnicaGlavniPekar.Designer.cs">
+      <DependentUpon>frmSkladistarPopisZahtjevnicaGlavniPekar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarKreirajNovuZahtjevnicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarKreirajNovuZahtjevnicu.Designer.cs">
+      <DependentUpon>frmSkladistarKreirajNovuZahtjevnicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarKreiranjeZahtjevnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarKreiranjeZahtjevnice.Designer.cs">
+      <DependentUpon>frmSkladistarKreiranjeZahtjevnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarKreirajNovuOtpisnicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarKreirajNovuOtpisnicu.Designer.cs">
+      <DependentUpon>frmSkladistarKreirajNovuOtpisnicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarPocetna.Designer.cs">
+      <DependentUpon>frmSkladistarPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarPoruke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarPoruke.Designer.cs">
+      <DependentUpon>frmSkladistarPoruke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarPrimke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarPrimke.Designer.cs">
+      <DependentUpon>frmSkladistarPrimke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarSaljiPoruku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarSaljiPoruku.Designer.cs">
+      <DependentUpon>frmSkladistarSaljiPoruku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikDodajNovogDobavljaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikDodajNovogDobavljaca.Designer.cs">
+      <DependentUpon>frmVlasnikDodajNovogDobavljaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikIzmjenaPodatakaDobavljac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikIzmjenaPodatakaDobavljac.Designer.cs">
+      <DependentUpon>frmVlasnikIzmjenaPodatakaDobavljac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikIzmjeniSirovinu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikIzmjeniSirovinu.Designer.cs">
+      <DependentUpon>frmVlasnikIzmjeniSirovinu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikKorisniciIzmjenaPodataka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikKorisniciIzmjenaPodataka.Designer.cs">
+      <DependentUpon>frmVlasnikKorisniciIzmjenaPodataka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikNovaNarudzbenica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikNovaNarudzbenica.Designer.cs">
+      <DependentUpon>frmVlasnikNovaNarudzbenica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikPopisDobavljaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikPopisDobavljaca.Designer.cs">
+      <DependentUpon>frmVlasnikPopisDobavljaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikPopisNarudzbenica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikPopisNarudzbenica.Designer.cs">
+      <DependentUpon>frmVlasnikPopisNarudzbenica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikPopisOtpisnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikPopisOtpisnica.Designer.cs">
+      <DependentUpon>frmVlasnikPopisOtpisnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikPopisZahtjevnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikPopisZahtjevnica.Designer.cs">
+      <DependentUpon>frmVlasnikPopisZahtjevnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSkladistarSkladiste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarSkladiste.Designer.cs">
+      <DependentUpon>frmSkladistarSkladiste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikKorisniciDodajNovog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikKorisniciDodajNovog.Designer.cs">
+      <DependentUpon>frmVlasnikKorisniciDodajNovog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikPocetna.Designer.cs">
+      <DependentUpon>frmVlasnikPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikPoruke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikPoruke.Designer.cs">
+      <DependentUpon>frmVlasnikPoruke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikPosaljiPoruku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikPosaljiPoruku.Designer.cs">
+      <DependentUpon>frmVlasnikPosaljiPoruku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikSkladiste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikSkladiste.Designer.cs">
+      <DependentUpon>frmVlasnikSkladiste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikSkladisteNovaSirovina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikSkladisteNovaSirovina.Designer.cs">
+      <DependentUpon>frmVlasnikSkladisteNovaSirovina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnik.cs" />
+    <Compile Include="frmPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrijava.Designer.cs">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmSkladistarPopisZahtjevnicaVlasnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSkladistarPopisZahtjevnicaVlasnik.Designer.cs">
+      <DependentUpon>frmSkladistarPopisZahtjevnicaVlasnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVlasnikKorisniciPopis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVlasnikKorisniciPopis.Designer.cs">
+      <DependentUpon>frmVlasnikKorisniciPopis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zahtjevnica.cs" />
+    <EmbeddedResource Include="frmGlavniPekarKreirajNovuZahtjevnicu.resx">
+      <DependentUpon>frmGlavniPekarKreirajNovuZahtjevnicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGlavniPekarKreiranjeZahtjevnice.resx">
+      <DependentUpon>frmGlavniPekarKreiranjeZahtjevnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGlavniPekarPocetna.resx">
+      <DependentUpon>frmGlavniPekarPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGlavniPekarPoruke.resx">
+      <DependentUpon>frmGlavniPekarPoruke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGlavniPekarPosaljiPoruku.resx">
+      <DependentUpon>frmGlavniPekarPosaljiPoruku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGlavniPekarSkladiste.resx">
+      <DependentUpon>frmGlavniPekarSkladiste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGlavniPekarZahtjevnice.resx">
+      <DependentUpon>frmGlavniPekarZahtjevnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrijava.resx">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarKreirajNovuPrimku.resx">
+      <DependentUpon>frmSkladistarKreirajNovuPrimku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarKreiranjeOtpisniceSirovine.resx">
+      <DependentUpon>frmSkladistarKreiranjeOtpisniceSirovine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarKreiranjePrimke.resx">
+      <DependentUpon>frmSkladistarKreiranjePrimke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarNovaIzdatnica.resx">
+      <DependentUpon>frmSkladistarNovaIzdatnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarPopisIzdatnica.resx">
+      <DependentUpon>frmSkladistarPopisIzdatnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarPopisOtpisnica.resx">
+      <DependentUpon>frmSkladistarPopisOtpisnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarPopisZahtjevnicaGlavniPekar.resx">
+      <DependentUpon>frmSkladistarPopisZahtjevnicaGlavniPekar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarKreirajNovuZahtjevnicu.resx">
+      <DependentUpon>frmSkladistarKreirajNovuZahtjevnicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarKreiranjeZahtjevnice.resx">
+      <DependentUpon>frmSkladistarKreiranjeZahtjevnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarKreirajNovuOtpisnicu.resx">
+      <DependentUpon>frmSkladistarKreirajNovuOtpisnicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarPocetna.resx">
+      <DependentUpon>frmSkladistarPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarPoruke.resx">
+      <DependentUpon>frmSkladistarPoruke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarPrimke.resx">
+      <DependentUpon>frmSkladistarPrimke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarSaljiPoruku.resx">
+      <DependentUpon>frmSkladistarSaljiPoruku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikDodajNovogDobavljaca.resx">
+      <DependentUpon>frmVlasnikDodajNovogDobavljaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikIzmjenaPodatakaDobavljac.resx">
+      <DependentUpon>frmVlasnikIzmjenaPodatakaDobavljac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikIzmjeniSirovinu.resx">
+      <DependentUpon>frmVlasnikIzmjeniSirovinu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikKorisniciIzmjenaPodataka.resx">
+      <DependentUpon>frmVlasnikKorisniciIzmjenaPodataka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikNovaNarudzbenica.resx">
+      <DependentUpon>frmVlasnikNovaNarudzbenica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikPopisDobavljaca.resx">
+      <DependentUpon>frmVlasnikPopisDobavljaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikPopisNarudzbenica.resx">
+      <DependentUpon>frmVlasnikPopisNarudzbenica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikPopisOtpisnica.resx">
+      <DependentUpon>frmVlasnikPopisOtpisnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikPopisZahtjevnica.resx">
+      <DependentUpon>frmVlasnikPopisZahtjevnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSkladistarSkladiste.resx">
+      <DependentUpon>frmSkladistarSkladiste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikKorisniciDodajNovog.resx">
+      <DependentUpon>frmVlasnikKorisniciDodajNovog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikPocetna.resx">
+      <DependentUpon>frmVlasnikPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikPoruke.resx">
+      <DependentUpon>frmVlasnikPoruke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikPosaljiPoruku.resx">
+      <DependentUpon>frmVlasnikPosaljiPoruku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikSkladiste.resx">
+      <DependentUpon>frmVlasnikSkladiste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikSkladisteNovaSirovina.resx">
+      <DependentUpon>frmVlasnikSkladisteNovaSirovina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmSkladistarPopisZahtjevnicaVlasnik.resx">
+      <DependentUpon>frmSkladistarPopisZahtjevnicaVlasnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVlasnikKorisniciPopis.resx">
+      <DependentUpon>frmVlasnikKorisniciPopis.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetIzdatnice.xsc">
+      <DependentUpon>DataSetIzdatnice.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetIzdatnice.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetIzdatnice.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetIzdatnice.xss">
+      <DependentUpon>DataSetIzdatnice.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetKorisnici.xsc">
+      <DependentUpon>DataSetKorisnici.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetKorisnici.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetKorisnici.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetKorisnici.xss">
+      <DependentUpon>DataSetKorisnici.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetOtpisnice.xsc">
+      <DependentUpon>DataSetOtpisnice.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetOtpisnice.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetOtpisnice.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetOtpisnice.xss">
+      <DependentUpon>DataSetOtpisnice.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPoruke.xsc">
+      <DependentUpon>DataSetPoruke.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPoruke.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPoruke.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetPoruke.xss">
+      <DependentUpon>DataSetPoruke.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPrimke.xsc">
+      <DependentUpon>DataSetPrimke.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPrimke.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPrimke.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetPrimke.xss">
+      <DependentUpon>DataSetPrimke.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSirovine.xsc">
+      <DependentUpon>DataSetSirovine.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSirovine.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSirovine.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetSirovine.xss">
+      <DependentUpon>DataSetSirovine.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUloge.xsc">
+      <DependentUpon>DataSetUloge.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUloge.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUloge.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetUloge.xss">
+      <DependentUpon>DataSetUloge.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetZahtjevnicaSirovina.xsc">
+      <DependentUpon>DataSetZahtjevnicaSirovina.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetZahtjevnicaSirovina.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetZahtjevnicaSirovina.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetZahtjevnicaSirovina.xss">
+      <DependentUpon>DataSetZahtjevnicaSirovina.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetZahtjevnicaSirovinaDodajNovi.xsc">
+      <DependentUpon>DataSetZahtjevnicaSirovinaDodajNovi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetZahtjevnicaSirovinaDodajNovi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetZahtjevnicaSirovinaDodajNovi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetZahtjevnicaSirovinaDodajNovi.xss">
+      <DependentUpon>DataSetZahtjevnicaSirovinaDodajNovi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetZahtjevnice.xsc">
+      <DependentUpon>DataSetZahtjevnice.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetZahtjevnice.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetZahtjevnice.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetZahtjevnice.xss">
+      <DependentUpon>DataSetZahtjevnice.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PI_Projekt_SiM_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="S&amp;M_App_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
